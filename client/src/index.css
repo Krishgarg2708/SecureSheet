@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+.cell-editable {
+  @apply bg-white dark:bg-gray-900;
+}
+
+.cell-readonly {
+  @apply bg-gray-200 dark:bg-gray-800 text-gray-500 cursor-not-allowed;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c7d2fe;
+  border-radius: 8px;
+}
