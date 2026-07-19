@@ -15,7 +15,6 @@ exports.getMyLogs = async (req, res) => {
   res.json({ success: true, logs });
 };
 
-// @route GET /api/logs (ADMIN) - global activity feed
 exports.getAllLogs = async (req, res) => {
   const logs = await ActivityLog.find()
     .populate('user', 'name email')
