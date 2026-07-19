@@ -11,7 +11,6 @@ const permissionRoutes = require('./routes/permissionRoutes');
 const logRoutes = require('./routes/logRoutes');
 
 connectDB();
-
 const app = express();
 
 app.use(cors({ origin: process.env.CLIENT_URL || '*', credentials: true }));
