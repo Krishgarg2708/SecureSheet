@@ -1,6 +1,5 @@
 const ActivityLog = require('../models/ActivityLog');
 
-// @route GET /api/logs/file/:fileId (ADMIN or file owner) - version history for a file
 exports.getFileLogs = async (req, res) => {
   const logs = await ActivityLog.find({ file: req.params.fileId })
     .populate('user', 'name email')
