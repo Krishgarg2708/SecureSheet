@@ -8,7 +8,6 @@ exports.getFileLogs = async (req, res) => {
     .limit(500);
   res.json({ success: true, logs });
 };
-// @route GET /api/logs/user/mine - my own activity timeline
 exports.getMyLogs = async (req, res) => {
   const logs = await ActivityLog.find({ user: req.user._id })
     .populate('file', 'filename')
